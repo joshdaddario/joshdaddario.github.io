@@ -1,40 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iteras.tech — Mechanical Prototyping</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    p { max-width: 600px; }
-    a {
-      color: #00bfff;
-      text-decoration: none;
-      border: 1px solid #00bfff;
-      padding: 8px 16px;
-      border-radius: 6px;
-      margin-top: 1rem;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    a:hover { background: #00bfff; color: #0a0a0a; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iteras.tech | Engineering Oddities & Prototypes</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0a0a0a;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+    color: #cccccc;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.product-card {
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+    background: #111;
+}
+
+.button {
+    color: #00bfff;
+    text-decoration: none;
+    border: 1px solid #00bfff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #00bfff;
+    color: #0a0a0a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    border: 1px solid #333;
+    padding: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+</style>
 </head>
+
 <body>
-  <h1>Iteras.tech</h1>
-  <p>Precision mechanical prototyping, rapid iteration, and design refinement.</p>
-  <a href="mailto:contact@iteras.tech">Get in Touch</a>
+
+<header>
+    <h1>ITERAS</h1>
+
+    <p>
+        Precision mechanical prototyping, experimental hardware,
+        and solutions to problems nobody asked to be solved.
+    </p>
+</header>
+
+<section>
+    <h2>Featured Product</h2>
+
+    <div class="product-card">
+
+        <h3>Iso-Fluidic Inertial Decoupler Mk 2.5</h3>
+
+        <p>
+            A wearable beverage stabilization platform utilizing
+            passive inertial isolation technology.
+        </p>
+
+        <p>
+            Designed to maintain wine glass stability during walking,
+            social gatherings, and other dynamic operating conditions.
+        </p>
+
+        <a class="button" href="#ifid">
+            View Technical Data
+        </a>
+
+    </div>
+</section>
+
+<section id="ifid">
+
+    <h2>Technical Specifications</h2>
+
+    <table>
+        <tr>
+            <td>Payload Capacity</td>
+            <td>1 Wine Glass</td>
+        </tr>
+
+        <tr>
+            <td>Degrees of Freedom</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>Power Consumption</td>
+            <td>0 W</td>
+        </tr>
+
+        <tr>
+            <td>Stabilization Method</td>
+            <td>Passive Gimbal</td>
+        </tr>
+
+        <tr>
+            <td>Operating Environment</td>
+            <td>Social Gatherings</td>
+        </tr>
+
+        <tr>
+            <td>Technology Readiness Level</td>
+            <td>Questionable</td>
+        </tr>
+    </table>
+
+</section>
+
+<section>
+
+    <h2>Validation Testing</h2>
+
+    <table>
+        <tr>
+            <td>Walking</td>
+            <td>PASS</td>
+        </tr>
+
+        <tr>
+            <td>Stair Navigation</td>
+            <td>PASS</td>
+        </tr>
+
+        <tr>
+            <td>Dancing</td>
+            <td>CONDITIONAL PASS</td>
+        </tr>
+
+        <tr>
+            <td>Rapid Beverage Deployment</td>
+            <td>PASS</td>
+        </tr>
+    </table>
+
+</section>
+
+<section>
+
+    <h2>Acquisition</h2>
+
+    <p>
+        Interested in acquiring an Iso-Fluidic Inertial Decoupler Mk 2.5?
+    </p>
+
+    <a class="button" href="mailto:contact@iteras.tech">
+        Request Purchase Information
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Iteras.tech
+</footer>
+
 </body>
 </html>
