@@ -186,6 +186,32 @@
       font-size: 0.95rem;
     }
   }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product-tile {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-tile img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.product-tile h3 {
+    margin-bottom: 8px;
+}
 </style>
 </head>
 
@@ -222,6 +248,51 @@
 
     <a class="button" href="#ifid">View Technical Data</a>
   </div>
+</section>
+
+  <section>
+
+    <h2>Product Portfolio</h2>
+
+    <p>
+        A growing collection of mechanical products, accessories,
+        and engineering curiosities developed by Iteras.
+    </p>
+
+    <div class="products-grid">
+
+        <div class="product-tile">
+            <img src="acm-0.png" alt="ACM-0">
+            <h3>ACM-0</h3>
+            <p>Fixed 0° Action Camera Mount</p>
+        </div>
+
+        <div class="product-tile">
+            <img src="acm-30.png" alt="ACM-30">
+            <h3>ACM-30</h3>
+            <p>Fixed 30° Action Camera Mount</p>
+        </div>
+
+        <div class="product-tile">
+            <img src="acm-45.png" alt="ACM-45">
+            <h3>ACM-45</h3>
+            <p>Fixed 45° Action Camera Mount</p>
+        </div>
+
+        <div class="product-tile">
+            <img src="acm-60.png" alt="ACM-60">
+            <h3>ACM-60</h3>
+            <p>Fixed 60° Action Camera Mount</p>
+        </div>
+
+        <div class="product-tile">
+            <img src="acm-A.png" alt="ACM-A">
+            <h3>ACM-A</h3>
+            <p>Adjustable Action Camera Mount</p>
+        </div>
+
+    </div>
+
 </section>
 
 <section id="ifid">
