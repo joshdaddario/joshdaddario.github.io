@@ -85,6 +85,15 @@
     font-size: clamp(1.3rem, 3vw, 1.6rem);
   }
 
+  h2 .subtitle {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-faint);
+    border-bottom: none;
+    margin-top: 6px;
+  }
+
   .product-card {
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -131,6 +140,32 @@
 
   .button:active {
     transform: translateY(0);
+  }
+
+  .button-secondary {
+    color: var(--text-muted);
+    border-color: var(--border-light);
+  }
+
+  .button-secondary:hover {
+    background: var(--border-light);
+    color: var(--text);
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .button-row .button {
+    margin-top: 0;
+    flex: 1 1 auto;
+    min-width: 140px;
+    font-size: 0.9rem;
+    padding: 9px 16px;
   }
 
   table {
@@ -186,32 +221,64 @@
       font-size: 0.95rem;
     }
   }
+
+  /* ACM product family */
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
     margin-top: 30px;
-}
+  }
 
-.product-tile {
-    background: #111;
-    border: 1px solid #222;
+  .product-tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 20px;
+    padding: 24px;
     text-align: center;
-}
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s, transform 0.3s;
+  }
 
-.product-tile img {
+  .product-tile:hover {
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+  }
+
+  .product-tile img {
     width: 100%;
     max-width: 180px;
     height: auto;
     display: block;
     margin: 0 auto 15px auto;
-}
+    background: transparent;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
+  }
 
-.product-tile h3 {
-    margin-bottom: 8px;
-}
+  .product-tile h3 {
+    margin-bottom: 4px;
+  }
+
+  .product-tile .tile-tagline {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .tile-specs {
+    margin-top: auto;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .tile-specs td {
+    padding: 8px 10px;
+  }
+
+  .tile-specs td:first-child {
+    color: var(--text-faint);
+  }
 </style>
 </head>
 
@@ -250,49 +317,122 @@
   </div>
 </section>
 
-  <section>
+<section id="acm">
+  <h2>
+    ACM Series
+    <span class="subtitle">Action Camera Mount Family — fixed and adjustable angle hardware</span>
+  </h2>
 
-    <h2>Product Portfolio</h2>
+  <p>
+    The ACM series is Iteras' line of 3D-printable action camera mounts, available
+    in four fixed angles and one fully adjustable variant. Each mount is designed
+    for standard action-camera thread hardware and optimized for FDM printing
+    with minimal supports.
+  </p>
 
-    <p>
-        A growing collection of mechanical products, accessories,
-        and engineering curiosities developed by Iteras.
-    </p>
+  <div class="products-grid">
 
-    <div class="products-grid">
-
-        <div class="product-tile">
-            <img src="acm-0.png" alt="ACM-0">
-            <h3>ACM-0</h3>
-            <p>Fixed 0° Action Camera Mount</p>
-        </div>
-
-        <div class="product-tile">
-            <img src="acm-30.png" alt="ACM-30">
-            <h3>ACM-30</h3>
-            <p>Fixed 30° Action Camera Mount</p>
-        </div>
-
-        <div class="product-tile">
-            <img src="acm-45.png" alt="ACM-45">
-            <h3>ACM-45</h3>
-            <p>Fixed 45° Action Camera Mount</p>
-        </div>
-
-        <div class="product-tile">
-            <img src="acm-60.png" alt="ACM-60">
-            <h3>ACM-60</h3>
-            <p>Fixed 60° Action Camera Mount</p>
-        </div>
-
-        <div class="product-tile">
-            <img src="acm-A.png" alt="ACM-A">
-            <h3>ACM-A</h3>
-            <p>Adjustable Action Camera Mount</p>
-        </div>
-
+    <div class="product-tile">
+      <img src="acm-0.png" alt="ACM-0" loading="lazy">
+      <h3>ACM-0</h3>
+      <p class="tile-tagline">Fixed 0° Action Camera Mount</p>
+      <p>
+        A flat, zero-degree mount for direct forward-facing shots. The simplest
+        and most rigid mount in the series — ideal as a baseline reference angle.
+      </p>
+      <table class="tile-specs">
+        <tr><td>Mount Angle</td><td>0°</td></tr>
+        <tr><td>Thread Type</td><td>1/4-20 UNC</td></tr>
+        <tr><td>Material</td><td>PETG</td></tr>
+        <tr><td>Print Weight</td><td>~18 g</td></tr>
+      </table>
+      <div class="button-row">
+        <a class="button" href="acm-0.stl" download>Download STL</a>
+        <a class="button button-secondary" href="mailto:contact@iteras.tech?subject=Printed%20ACM-0%20Request">Request Printed Version</a>
+      </div>
     </div>
 
+    <div class="product-tile">
+      <img src="acm-30.png" alt="ACM-30" loading="lazy">
+      <h3>ACM-30</h3>
+      <p class="tile-tagline">Fixed 30° Action Camera Mount</p>
+      <p>
+        Angles the camera 30° from flat, useful for helmet and chest mounting
+        positions where a slight upward tilt is needed to level the horizon.
+      </p>
+      <table class="tile-specs">
+        <tr><td>Mount Angle</td><td>30°</td></tr>
+        <tr><td>Thread Type</td><td>1/4-20 UNC</td></tr>
+        <tr><td>Material</td><td>PETG</td></tr>
+        <tr><td>Print Weight</td><td>~21 g</td></tr>
+      </table>
+      <div class="button-row">
+        <a class="button" href="acm-30.stl" download>Download STL</a>
+        <a class="button button-secondary" href="mailto:contact@iteras.tech?subject=Printed%20ACM-30%20Request">Request Printed Version</a>
+      </div>
+    </div>
+
+    <div class="product-tile">
+      <img src="acm-45.png" alt="ACM-45" loading="lazy">
+      <h3>ACM-45</h3>
+      <p class="tile-tagline">Fixed 45° Action Camera Mount</p>
+      <p>
+        A mid-range angled mount for side-mounted or roll-cage positions,
+        balancing forward and downward field of view.
+      </p>
+      <table class="tile-specs">
+        <tr><td>Mount Angle</td><td>45°</td></tr>
+        <tr><td>Thread Type</td><td>1/4-20 UNC</td></tr>
+        <tr><td>Material</td><td>PETG</td></tr>
+        <tr><td>Print Weight</td><td>~23 g</td></tr>
+      </table>
+      <div class="button-row">
+        <a class="button" href="acm-45.stl" download>Download STL</a>
+        <a class="button button-secondary" href="mailto:contact@iteras.tech?subject=Printed%20ACM-45%20Request">Request Printed Version</a>
+      </div>
+    </div>
+
+    <div class="product-tile">
+      <img src="acm-60.png" alt="ACM-60" loading="lazy">
+      <h3>ACM-60</h3>
+      <p class="tile-tagline">Fixed 60° Action Camera Mount</p>
+      <p>
+        A steep-angle mount for downward-facing or close-quarters shots,
+        commonly used on handlebar and low-mount positions.
+      </p>
+      <table class="tile-specs">
+        <tr><td>Mount Angle</td><td>60°</td></tr>
+        <tr><td>Thread Type</td><td>1/4-20 UNC</td></tr>
+        <tr><td>Material</td><td>PETG</td></tr>
+        <tr><td>Print Weight</td><td>~25 g</td></tr>
+      </table>
+      <div class="button-row">
+        <a class="button" href="acm-60.stl" download>Download STL</a>
+        <a class="button button-secondary" href="mailto:contact@iteras.tech?subject=Printed%20ACM-60%20Request">Request Printed Version</a>
+      </div>
+    </div>
+
+    <div class="product-tile">
+      <img src="acm-A.png" alt="ACM-A" loading="lazy">
+      <h3>ACM-A</h3>
+      <p class="tile-tagline">Adjustable Action Camera Mount</p>
+      <p>
+        A ratcheting, field-adjustable mount that covers the full 0°–60° range
+        in a single part — trades a small amount of rigidity for total flexibility.
+      </p>
+      <table class="tile-specs">
+        <tr><td>Mount Angle</td><td>0°–60° (adjustable)</td></tr>
+        <tr><td>Thread Type</td><td>1/4-20 UNC</td></tr>
+        <tr><td>Material</td><td>PETG + Nylon Hinge</td></tr>
+        <tr><td>Print Weight</td><td>~31 g</td></tr>
+      </table>
+      <div class="button-row">
+        <a class="button" href="acm-A.stl" download>Download STL</a>
+        <a class="button button-secondary" href="mailto:contact@iteras.tech?subject=Printed%20ACM-A%20Request">Request Printed Version</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section id="ifid">
