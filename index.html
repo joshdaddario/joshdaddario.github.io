@@ -294,6 +294,73 @@
     color: var(--text-faint);
     margin-top: 8px;
   }
+
+  /* IFID configurations */
+  .config-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+  }
+
+  .config-note {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    margin-top: 14px;
+    text-align: left;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  .bundle-card {
+    grid-column: 1 / -1;
+  }
+
+  .bundle-image-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+
+  .bundle-image-pair img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  }
+
+  .bundle-plus {
+    font-size: 1.8rem;
+    color: var(--text-faint);
+    font-weight: 300;
+    padding: 0 16px;
+    flex-shrink: 0;
+  }
+
+  .bundle-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .bundle-image-pair img {
+      max-width: 130px;
+    }
+
+    .bundle-plus {
+      padding: 0 8px;
+    }
+  }
 </style>
 </head>
 
@@ -310,25 +377,104 @@
 <section>
   <h2>Featured Product</h2>
 
-  <div class="product-card">
-    <img src="IFID Hero Shot.png"
-         alt="Iso-Fluidic Inertial Decoupler Mk 2.5"
-         class="product-image"
-         loading="lazy">
+  <p>
+    The Iso-Fluidic Inertial Decoupler Mk 2.5 is available in two payload
+    configurations, or as a dual-configuration bundle. Every unit ships
+    complete with a chest-mount harness — only the cradle geometry changes
+    between configurations.
+  </p>
 
-    <h3>Iso-Fluidic Inertial Decoupler Mk 2.5</h3>
+  <div class="config-grid">
 
-    <p>
-      A wearable beverage stabilization platform utilizing
-      passive inertial isolation technology.
-    </p>
+    <div class="product-card">
+      <img src="IFID Hero Shot.png"
+           alt="Iso-Fluidic Inertial Decoupler Mk 2.5 — Wine Glass Configuration"
+           class="product-image"
+           loading="lazy">
 
-    <p>
-      Designed to maintain wine glass stability during walking,
-      social gatherings, and other dynamic operating conditions.
-    </p>
+      <h3>Wine Glass Configuration</h3>
 
-    <a class="button" href="#ifid">View Technical Data</a>
+      <p>
+        A wearable beverage stabilization platform utilizing
+        passive inertial isolation technology.
+      </p>
+
+      <p>
+        Designed to maintain wine glass stability during walking,
+        social gatherings, and other dynamic operating conditions.
+      </p>
+
+      <div class="button-row">
+        <a class="button" href="#ifid">View Technical Data</a>
+        <a class="button button-secondary" href="https://buy.stripe.com/6oU9ASbev4qPd74d1SfQI05" target="_blank" rel="noopener">Order — <span class="price-tag">$79.99</span></a>
+      </div>
+
+      <p class="config-note">
+        Includes chest-mount harness. At checkout, select <strong>Wine
+        Glass</strong> from the configuration dropdown. See Dual
+        Configuration Bundle below to add the 12 oz can cradle.
+      </p>
+    </div>
+
+    <div class="product-card">
+      <img src="IFID_beer_config_render.png"
+           alt="Iso-Fluidic Inertial Decoupler Mk 2.5 — 12 oz Can Configuration"
+           class="product-image"
+           loading="lazy">
+
+      <h3>12 oz Can Configuration</h3>
+
+      <p>
+        Same passive isolation platform, re-cradled for standard
+        12 oz (355 mL) beverage cans.
+      </p>
+
+      <p>
+        Engineered for tailgates, backyard operations, and other
+        high-vibration social environments.
+      </p>
+
+      <div class="button-row">
+        <a class="button" href="#ifid">View Technical Data</a>
+        <a class="button button-secondary" href="https://buy.stripe.com/6oU9ASbev4qPd74d1SfQI05" target="_blank" rel="noopener">Order — <span class="price-tag">$79.99</span></a>
+      </div>
+
+      <p class="config-note">
+        Includes chest-mount harness. At checkout, select <strong>12 oz
+        Can</strong> from the configuration dropdown. See Dual
+        Configuration Bundle below to add the wine glass cradle.
+      </p>
+    </div>
+
+    <div class="product-card bundle-card">
+      <span class="bundle-badge">Best Value</span>
+
+      <div class="bundle-image-pair">
+        <img src="IFID Hero Shot.png" alt="Wine Glass Configuration" loading="lazy">
+        <span class="bundle-plus">+</span>
+        <img src="IFID_beer_config_render.png" alt="12 oz Can Configuration" loading="lazy">
+      </div>
+
+      <h3>Dual Configuration Bundle</h3>
+
+      <p>
+        <strong>One IFID Mk 2.5 unit</strong> — not two — shipped with both
+        cradle attachments in the box. Swap between wine glass and 12 oz
+        (355 mL) can support by changing the cradle, no second purchase
+        required.
+      </p>
+
+      <div class="button-row">
+        <a class="button button-secondary" href="https://buy.stripe.com/8x2bJ0dmD8H59USaTKfQI06" target="_blank" rel="noopener">Order Both Cradles — <span class="price-tag">$94.99</span></a>
+      </div>
+
+      <p class="config-note">
+        Ships as a single IFID platform with one harness and two
+        interchangeable cradles (wine glass + 12 oz can). $15 savings
+        versus ordering two single-configuration units separately.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -460,10 +606,11 @@
   <h2>Technical Specifications</h2>
 
   <table>
-    <tr><td>Payload Capacity</td><td>1 Wine Glass</td></tr>
+    <tr><td>Payload Capacity</td><td>1 Wine Glass <em>or</em> 1 Standard 12 oz (355 mL) Can</td></tr>
     <tr><td>Degrees of Freedom</td><td>2</td></tr>
     <tr><td>Power Consumption</td><td>0 W</td></tr>
     <tr><td>Stabilization Method</td><td>Passive Gimbal</td></tr>
+    <tr><td>Mounting</td><td>Chest Harness (included)</td></tr>
     <tr><td>Operating Environment</td><td>Social Gatherings</td></tr>
     <tr><td>Technology Readiness Level</td><td>Questionable</td></tr>
   </table>
